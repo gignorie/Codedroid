@@ -1,4 +1,4 @@
-name: Android CI
+Name: Android CI
 
 on:
   pull_request:
@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: '11'
-          distribution: 'adopt-openjdk'
+          distribution: 'temurin'
           cache: gradle
 
       - name: Grant Execute Permission for gradlew
@@ -39,3 +39,4 @@ jobs:
         with:
           name: apk-debug
           path: app/build/outputs/apk/debug
+          
